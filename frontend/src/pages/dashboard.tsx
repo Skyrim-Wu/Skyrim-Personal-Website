@@ -1,3 +1,4 @@
+import { StudioLink } from "@/components/layout/StudioLink";
 import Navbar from "@/components/layout/Header";
 import Skyrim from "../assets/optimized/hero-1280.jpg";
 import { useState, useEffect } from "react";
@@ -59,7 +60,14 @@ export default function Home() {
                 about my projects, skills, and interests.
               </p>
 
-              <div className="pt-4 flex justify-center lg:justify-start gap-4">
+              <div className="text-center lg:text-left">
+                <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                  Need photography, custom software, AI, or a website? I also run my own studio.
+                </p>
+                <StudioLink className="mt-1">Visit Skyrim Studio</StudioLink>
+              </div>
+
+              <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
                 <button
                   type="button"
                   className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg cursor-pointer"

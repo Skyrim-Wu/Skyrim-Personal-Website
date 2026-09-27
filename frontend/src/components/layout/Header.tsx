@@ -1,3 +1,4 @@
+import { StudioLink } from "./StudioLink";
 import { HoverLinkButton } from "./HoverLinkButton";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -115,11 +116,12 @@ export default function Navbar() {
           />
         </Link>
       </h1>
-      <nav className="hidden md:flex space-x-6">
+      <nav className="hidden xl:flex items-center space-x-4">
         <HoverLinkButton to="#hero">Home</HoverLinkButton>
         <HoverLinkButton to="#about">About</HoverLinkButton>
         <HoverLinkButton to="#project">Project</HoverLinkButton>
         <HoverLinkButton to="#contact">Contact</HoverLinkButton>
+        <StudioLink className="px-3 text-lg">Studio</StudioLink>
         <Link
           to="/cv"
           className={`inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] text-primary underline-offset-4 hover:underline h-9 px-4 py-2 text-lg transition-transform duration-300 ease-in-out hover:scale-110 ${isCVPage ? "underline text-indigo-600 dark:text-indigo-400" : ""
@@ -139,7 +141,7 @@ export default function Navbar() {
           <Button
             asChild
             variant="ghost"
-            className="hidden md:inline-flex h-9 px-4 py-2 text-lg transition-transform duration-300 ease-in-out hover:scale-110">
+            className="hidden xl:inline-flex h-9 px-4 py-2 text-lg transition-transform duration-300 ease-in-out hover:scale-110">
             <Link to="/admin/login">Login</Link>
           </Button>
         )}
@@ -163,7 +165,7 @@ export default function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800">
+              className="xl:hidden cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800">
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
@@ -212,6 +214,7 @@ export default function Navbar() {
                 onClick={() => navigate("/pee")}>
                 Pee
               </Button>
+              <StudioLink className="w-full">Studio</StudioLink>
               {!session && (
                 <Button
                   variant="ghost"

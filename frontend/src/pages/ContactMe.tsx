@@ -1,3 +1,4 @@
+import { StudioLink } from "@/components/layout/StudioLink";
 import GithubIcon from "../assets/github.svg";
 import LinkedinIcon from "../assets/linkedin.svg";
 import Gmail from "../assets/gmail.svg";
@@ -29,6 +30,11 @@ export default function ContactMe() {
               always happy to connect about interesting projects, creative
               ideas, or potential collaborations.
             </p>
+            <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 mb-2">
+              I also run Skyrim Studio, offering photography, custom software,
+              AI applications, and website development.
+            </p>
+            <StudioLink className="text-lg">Visit Skyrim Studio</StudioLink>
           </div>
           <div className="flex flex-wrap gap-4">
             <a
